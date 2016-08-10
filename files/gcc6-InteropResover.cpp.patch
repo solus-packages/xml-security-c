@@ -1,0 +1,13 @@
+diff --git a/xsec/tools/checksig/InteropResolver.cpp b/xsec/tools/checksig/InteropResolver.cpp
+index e700b99..f35e087 100644
+--- a/xsec/tools/checksig/InteropResolver.cpp
++++ b/xsec/tools/checksig/InteropResolver.cpp
+@@ -645,7 +645,7 @@ XSECCryptoKey * InteropResolver::resolveKey(DSIGKeyInfoList * lst) {
+ 
+ 	}
+ 
+-	return false;
++	return NULL;
+ 
+ }
+ 
