@@ -1,9 +1,9 @@
 name       : xml-security-c
 version    : 1.7.3
-release    : 1
+release    : 2
 source     :
     - http://www.apache.org/dist/santuario/c-library/xml-security-c-1.7.3.tar.gz : e5226e7319d44f6fd9147a13fb853f5c711b9e75bf60ec273a0ef8a190592583
-license    : Apache-1.0
+license    : Apache-2.0
 component  : programming
 summary    : Apache XML Security for C++ - This library includes a mature Digital Signature and Encryption implementation
 description: |
