@@ -1,19 +1,17 @@
 name       : xml-security-c
-version    : 1.7.3
-release    : 3
+version    : 2.0.2
+release    : 4
 source     :
-    - http://www.apache.org/dist/santuario/c-library/xml-security-c-1.7.3.tar.gz : e5226e7319d44f6fd9147a13fb853f5c711b9e75bf60ec273a0ef8a190592583
+    - http://www.apache.org/dist/santuario/c-library/xml-security-c-2.0.2.tar.bz2 : 39e963ab4da477b7bda058f06db37228664c68fe68902d86e334614dd06e046b
 license    : Apache-2.0
 component  : programming
-summary    : Apache XML Security for C++ - This library includes a mature Digital
-    Signature and Encryption implementation
+summary    : Apache XML Security for C++ - This library includes a mature Digital Signature and Encryption implementation
 description: |
     Apache XML Security for C++ - This library includes a mature Digital Signature and Encryption implementation
 builddeps  :
     - pkgconfig(openssl)
     - pkgconfig(xerces-c)
 setup      : |
-    %patch -p1 < $pkgfiles/gcc6-InteropResover.cpp.patch
     %configure --disable-static
 build      : |
     %make

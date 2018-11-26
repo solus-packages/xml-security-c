@@ -19,8 +19,16 @@
 </Description>
         <PartOf>programming</PartOf>
         <Files>
-            <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib64/lib*.so.*</Path>
+            <Path fileType="executable">/usr/bin/xsec-c14n</Path>
+            <Path fileType="executable">/usr/bin/xsec-checksig</Path>
+            <Path fileType="executable">/usr/bin/xsec-cipher</Path>
+            <Path fileType="executable">/usr/bin/xsec-siginf</Path>
+            <Path fileType="executable">/usr/bin/xsec-templatesign</Path>
+            <Path fileType="executable">/usr/bin/xsec-txfmout</Path>
+            <Path fileType="executable">/usr/bin/xsec-xklient</Path>
+            <Path fileType="executable">/usr/bin/xsec-xtest</Path>
+            <Path fileType="library">/usr/lib64/libxml-security-c.so.20</Path>
+            <Path fileType="library">/usr/lib64/libxml-security-c.so.20.0.2</Path>
         </Files>
     </Package>
     <Package>
@@ -30,17 +38,166 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="3">xml-security-c</Dependency>
+            <Dependency release="4">xml-security-c</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include/</Path>
-            <Path fileType="library">/usr/lib64/lib*.so</Path>
+            <Path fileType="header">/usr/include/xsec/canon/XSECC14n20010315.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/canon/XSECCanon.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/canon/XSECXMLNSStack.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGAlgorithmHandlerDefault.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGConstants.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGKeyInfo.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGKeyInfoDEREncoded.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGKeyInfoExt.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGKeyInfoList.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGKeyInfoMgmtData.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGKeyInfoName.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGKeyInfoPGPData.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGKeyInfoSPKIData.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGKeyInfoValue.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGKeyInfoX509.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGObject.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGReference.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGReferenceList.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGSignature.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGSignedInfo.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGTransform.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGTransformBase64.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGTransformC14n.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGTransformEnvelope.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGTransformList.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGTransformXPath.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGTransformXPathFilter.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGTransformXSL.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGXPathFilterExpr.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/dsig/DSIGXPathHere.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/NSS/NSSCryptoHash.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/NSS/NSSCryptoHashHMAC.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/NSS/NSSCryptoKeyDSA.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/NSS/NSSCryptoKeyHMAC.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/NSS/NSSCryptoKeyRSA.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/NSS/NSSCryptoProvider.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/NSS/NSSCryptoSymmetricKey.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/NSS/NSSCryptoX509.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/OpenSSL/OpenSSLCryptoBase64.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/OpenSSL/OpenSSLCryptoHash.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/OpenSSL/OpenSSLCryptoHashHMAC.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/OpenSSL/OpenSSLCryptoKeyDSA.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/OpenSSL/OpenSSLCryptoKeyEC.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/OpenSSL/OpenSSLCryptoKeyHMAC.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/OpenSSL/OpenSSLCryptoKeyRSA.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/OpenSSL/OpenSSLCryptoProvider.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/OpenSSL/OpenSSLCryptoSymmetricKey.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/OpenSSL/OpenSSLCryptoX509.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/OpenSSL/OpenSSLSupport.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/XSCrypt/XSCryptCryptoBase64.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/XSECCryptoBase64.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/XSECCryptoException.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/XSECCryptoHash.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/XSECCryptoKey.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/XSECCryptoKeyDSA.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/XSECCryptoKeyEC.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/XSECCryptoKeyHMAC.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/XSECCryptoKeyRSA.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/XSECCryptoProvider.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/XSECCryptoSymmetricKey.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/XSECCryptoUtils.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/XSECCryptoX509.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/XSECKeyInfoResolver.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/enc/XSECKeyInfoResolverDefault.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/framework/XSECAlgorithmHandler.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/framework/XSECAlgorithmMapper.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/framework/XSECConfig.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/framework/XSECDefs.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/framework/XSECEnv.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/framework/XSECError.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/framework/XSECException.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/framework/XSECProvider.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/framework/XSECURIResolver.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/framework/XSECURIResolverXerces.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/framework/XSECVersion.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/framework/XSECW32Config.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/transformers/TXFMBase.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/transformers/TXFMBase64.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/transformers/TXFMC14n.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/transformers/TXFMChain.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/transformers/TXFMChar.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/transformers/TXFMCipher.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/transformers/TXFMConcatChains.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/transformers/TXFMDocObject.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/transformers/TXFMEnvelope.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/transformers/TXFMHash.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/transformers/TXFMOutputFile.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/transformers/TXFMParser.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/transformers/TXFMSB.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/transformers/TXFMURL.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/transformers/TXFMXPath.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/transformers/TXFMXPathFilter.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/transformers/TXFMXSL.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/utils/XSECBinTXFMInputStream.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/utils/XSECNameSpaceExpander.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/utils/XSECPlatformUtils.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/utils/XSECSOAPRequestor.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/utils/XSECSOAPRequestorSimple.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/utils/XSECSafeBuffer.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/utils/XSECSafeBufferFormatter.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/utils/XSECTXFMInputSource.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/utils/XSECXPathNodeList.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xenc/XENCCipher.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xenc/XENCCipherData.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xenc/XENCCipherReference.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xenc/XENCCipherValue.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xenc/XENCEncryptedData.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xenc/XENCEncryptedKey.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xenc/XENCEncryptedType.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xenc/XENCEncryptionMethod.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSAuthentication.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSCompoundRequest.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSCompoundResult.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSConstants.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSKeyBinding.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSKeyBindingAbstractType.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSLocateRequest.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSLocateResult.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSMessageAbstractType.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSMessageFactory.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSNotBoundAuthentication.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSPendingRequest.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSPrototypeKeyBinding.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSQueryKeyBinding.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSRSAKeyPair.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSRecoverKeyBinding.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSRecoverRequest.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSRecoverResult.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSRegisterRequest.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSRegisterResult.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSReissueKeyBinding.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSReissueRequest.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSReissueResult.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSRequestAbstractType.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSRespondWith.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSResponseMechanism.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSResult.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSResultType.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSRevokeKeyBinding.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSRevokeRequest.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSRevokeResult.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSStatus.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSStatusRequest.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSStatusResult.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSUnverifiedKeyBinding.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSUseKeyWith.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSValidateRequest.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSValidateResult.hpp</Path>
+            <Path fileType="header">/usr/include/xsec/xkms/XKMSValidityInterval.hpp</Path>
+            <Path fileType="library">/usr/lib64/libxml-security-c.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/xml-security-c.pc</Path>
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2018-03-26</Date>
-            <Version>1.7.3</Version>
+        <Update release="4">
+            <Date>2018-11-26</Date>
+            <Version>2.0.2</Version>
             <Comment>Packaging update</Comment>
             <Name>Peter O&apos;Connor</Name>
             <Email>peter@solus-project.com</Email>
